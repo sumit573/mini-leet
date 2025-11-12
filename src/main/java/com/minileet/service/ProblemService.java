@@ -18,7 +18,7 @@ public class ProblemService {
         return new ArrayList<>(problems.values());
     }
 
-    public Problem getProblems(String id) {
+    public Problem getProblem(String id) {
         return problems.get(id);
     }
 
