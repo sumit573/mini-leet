@@ -30,11 +30,11 @@ jobs:
             ${{ runner.os }}-m2-
 
       - name: Build and test backend
-        working-directory: ./Backend/mini-leet
+        working-directory: .
         run: mvn -B clean verify
 
       - name: SonarCloud Scan
-        working-directory: ./Backend/mini-leet
+        working-directory: .
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
