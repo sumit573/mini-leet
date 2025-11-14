@@ -34,10 +34,12 @@ jobs:
         run: mvn -B clean verify
         working-directory: .
 
+      # If you don't want to fail CI when SONAR_TOKEN is missing,
+      # you can remove the two "Fail if" / "SonarCloud Scan" steps below.
       - name: Fail if SONAR_TOKEN is not set
         if: ${{ secrets.SONAR_TOKEN == '' }}
         run: |
-          echo "ERROR: SONAR_TOKEN secret is missing."
+          echo "ERROR: SONAR_TOKEN secret is missing. Add it in Settings → Secrets → Actions."
           exit 1
 
       - name: SonarCloud Scan
@@ -51,3 +53,4 @@ jobs:
             -Dsonar.projectKey=sumit573_mini-leet
             -Dsonar.organization=sumit573
             -Dsonar.java.binaries=target/classes
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
