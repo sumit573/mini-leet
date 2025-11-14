@@ -36,7 +36,7 @@ jobs:
         working-directory: .
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarqube-scan-action@v5.0.0
+        uses: sonarsource/sonarqube-scan-action@1d534a18a537f528c9b78c2984ec02dc2744a1c7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -45,3 +45,4 @@ jobs:
             -Dsonar.projectKey=sumit573_mini-leet
             -Dsonar.organization=sumit573
             -Dsonar.java.binaries=target/classes
+            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
