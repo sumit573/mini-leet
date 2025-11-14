@@ -1,3 +1,4 @@
+# yaml
 name: Backend CI with SonarCloud
 
 on:
@@ -34,8 +35,15 @@ jobs:
         run: mvn -B clean verify
         working-directory: .
 
+      - name: Fail if SONAR_TOKEN is not set
+        if: ${{ secrets.SONAR_TOKEN == '' }}
+        run: |
+          echo "ERROR: SONAR_TOKEN secret is missing. Create a SonarCloud token and add it to Settings → Secrets → Actions as SONAR_TOKEN."
+          exit 1
+
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        if: ${{ secrets.SONAR_TOKEN != '' }}
+        uses: sonarsource/sonarqube-scan-action@v5.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
