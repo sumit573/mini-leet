@@ -1,4 +1,3 @@
-# yaml
 name: Backend CI with SonarCloud
 
 on:
@@ -35,8 +34,15 @@ jobs:
         run: mvn -B clean verify
         working-directory: .
 
+      - name: Fail if SONAR_TOKEN is not set
+        if: ${{ secrets.SONAR_TOKEN == '' }}
+        run: |
+          echo "ERROR: SONAR_TOKEN secret is missing."
+          exit 1
+
       - name: SonarCloud Scan
-        uses: sonarsource/sonarqube-scan-action@1d534a18a537f528c9b78c2984ec02dc2744a1c7
+        if: ${{ secrets.SONAR_TOKEN != '' }}
+        uses: SonarSource/sonarqube-scan-action@b74c66fc2e32b1e3bdf1c18799eac21c24a40e67
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -45,4 +51,3 @@ jobs:
             -Dsonar.projectKey=sumit573_mini-leet
             -Dsonar.organization=sumit573
             -Dsonar.java.binaries=target/classes
-            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
