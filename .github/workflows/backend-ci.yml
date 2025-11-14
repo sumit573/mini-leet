@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -19,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
       - name: Cache Maven dependencies
         uses: actions/cache@v4
@@ -30,11 +31,10 @@ jobs:
             ${{ runner.os }}-m2-
 
       - name: Build and test backend
-        working-directory: .
         run: mvn -B clean verify
+        working-directory: .
 
       - name: SonarCloud Scan
-        working-directory: .
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,4 +44,3 @@ jobs:
             -Dsonar.projectKey=sumit573_mini-leet
             -Dsonar.organization=sumit573
             -Dsonar.java.binaries=target/classes
-            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
