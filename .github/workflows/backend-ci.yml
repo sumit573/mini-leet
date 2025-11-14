@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: 17
 
       - name: Cache Maven dependencies
         uses: actions/cache@v4
@@ -30,21 +30,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-m2-
 
-      - name: Build and test backend
+      - name: Build
         run: mvn -B clean verify
-        working-directory: .
-
-      # If you don't want to fail CI when SONAR_TOKEN is missing,
-      # you can remove the two "Fail if" / "SonarCloud Scan" steps below.
-      - name: Fail if SONAR_TOKEN is not set
-        if: ${{ secrets.SONAR_TOKEN == '' }}
-        run: |
-          echo "ERROR: SONAR_TOKEN secret is missing. Add it in Settings → Secrets → Actions."
-          exit 1
 
       - name: SonarCloud Scan
-        if: ${{ secrets.SONAR_TOKEN != '' }}
-        uses: SonarSource/sonarqube-scan-action@b74c66fc2e32b1e3bdf1c18799eac21c24a40e67
+        uses: sonarsource/sonarqube-scan-action@1d534a18a537f528c9b78c2984ec02dc2744a1c7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
