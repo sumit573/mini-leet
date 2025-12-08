@@ -2,27 +2,18 @@ package com.minileet.service;
 
 import com.minileet.model.Problem;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
-public class ProblemService {
+public interface ProblemService {
 
-    private final Map<String, Problem> problems = new HashMap<>();
+    List<Problem> getAll();
 
-    public Problem createProblem(Problem problem) {
-        problem.setId(UUID.randomUUID().toString());
-        problems.put(problem.getId(), problem);
-        return problem;
-    }
+    Optional<Problem> getById(Long id);
 
-    public List<Problem> listProblems() {
-        return new ArrayList<>(problems.values());
-    }
+    Problem create(Problem problem);
 
-    public Problem getProblem(String id) {
-        return problems.get(id);
-    }
+    Optional<Problem> update(Long id, Problem newData);
 
-    public boolean deleteProblem(String id) {
-        return problems.remove(id) != null;
-    }
+    boolean delete(Long id);
 }
