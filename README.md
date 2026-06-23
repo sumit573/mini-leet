@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:0d1117&height=200&section=header&text=Sumit%20Awasthi&fontSize=50&fontColor=58a6ff&animation=fadeIn&fontAlignY=38&desc=Backend%20Developer%20%7C%20Java%20%7C%20Spring%20Boot%20%7C%20Node.js&descAlignY=60&descAlign=50&descColor=8b949e" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1b27,100:0d1117&height=200&section=header&text=Sumit%20Awasthi&fontSize=50&fontColor=58a6ff&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20Java%20%7C%20React%20%7C%20Spring%20Boot%20%7C%20DevOps&descAlignY=60&descAlign=50&descColor=8b949e" width="100%" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&random=false&width=600&lines=Hey+There%21+I'm+Sumit+%F0%9F%91%8B;Backend+Developer+%F0%9F%9A%80;Java+%26+Spring+Boot+Enthusiast+%E2%98%95;Building+Scalable+REST+APIs+%F0%9F%94%A7;Currently+Exploring+Spring+AI+%F0%9F%A4%96)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&random=false&width=650&lines=Hey+There!+I'm+Sumit+%F0%9F%91%8B;Full+Stack+Developer+%F0%9F%9A%80;Java+%26+Spring+Boot+Enthusiast+%E2%98%95;React+%7C+Node.js+%7C+Express.js+%F0%9F%94%A5;Docker+%7C+CI%2FCD+%7C+DevOps+%F0%9F%90%B3;Currently+Exploring+Spring+AI+%F0%9F%A4%96)](https://git.io/typing-svg)
 
 <img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&label=Profile+Views&color=58a6ff&style=flat-square" alt="profile views" />
 
@@ -13,30 +13,32 @@
 ## 🧑‍💻 About Me
 
 ```java
-public class SumitAwasthi extends Developer {
+public class SumitAwasthi extends FullStackDeveloper {
 
-    private final String name        = "Sumit Awasthi";
-    private final String role        = "FullStack Developer";
-    private final String location    = "India 🇮🇳";
-    private final String[] learning  = { "Spring Boot", "Spring AI" };
-    private final String[] expertise = { "Java", "JavaScript", "Node.js",
-                                         "Express.js", "MongoDB", "SQL", React.js };
-    private final String email       = "awasthisumit124@gmail.com";
+    private final String   name        = "Sumit Awasthi";
+    private final String   role        = "Full Stack Developer";
+    private final String   location    = "India 🇮🇳";
+    private final String[] frontend    = { "React.js", "Redux", "HTML5", "CSS3", "Bootstrap" };
+    private final String[] backend     = { "Java", "Spring Boot", "Node.js", "Express.js" };
+    private final String[] databases   = { "MongoDB", "MySQL" };
+    private final String[] devops      = { "Docker", "GitHub Actions", "CI/CD", "Linux" };
+    private final String[] learning    = { "Spring AI", "Kubernetes", "AWS" };
+    private final String   email       = "awasthisumit124@gmail.com";
 
     @Override
     public String getFunFact() {
-        return "I believe clean code IS the best documentation. 🧹";
+        return "I ship features from React to Docker — end to end! 🚀";
     }
 
     public static void main(String[] args) {
-        System.out.println("Open to exciting backend opportunities! 🚀");
+        System.out.println("Building products that scale. Open to opportunities! 💼");
     }
 }
 ```
 
-- 🔭 &nbsp;Currently building **production-grade Backend systems**
-- 🌱 &nbsp;Deep-diving into **Spring Boot & Spring AI**
-- 💬 &nbsp;Ask me anything about **Java · React.js · Node.js · Express.js · MongoDB · SQL**
+- 🔭 &nbsp;Currently building **Full Stack apps with React + Spring Boot**
+- 🌱 &nbsp;Deep-diving into **Spring AI, Kubernetes & AWS**
+- 💬 &nbsp;Ask me about **Java · React · Node.js · Express.js · MongoDB · Docker · SQL**
 - 📫 &nbsp;Reach me at **[awasthisumit124@gmail.com](mailto:awasthisumit124@gmail.com)**
 - ⚡ &nbsp;Fun fact: I debug faster with coffee than without it ☕
 
@@ -64,11 +66,22 @@ public class SumitAwasthi extends Developer {
 ![MySQL](https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### 🌐 Frontend
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/Redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-### 🔧 Tools & DevOps
+### 🐳 DevOps & Cloud
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+### 🔧 Tools
 ![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
